@@ -13,16 +13,25 @@
 }
 
 html {
+  /* font-size: 62.5%; */
   font-size: clamp(14px, 2vw, 16px);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  /* does not work on safari or MS Edge */
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
   overflow-x: hidden;
-  background-color: #fcfcfc;
+  /* overflow-y: hidden; */
+  background-image: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0.575) 100%
+    ),
+    url("/assets/paper-background.png");
+  background-size: contain;
 }
 
 ::selection {
@@ -35,12 +44,11 @@ body {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
 }
-
-.container-hero {
-  max-width: 1200px;
+.container-2 {
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -74,7 +82,7 @@ body {
 
 .heading-tertiary {
   font-family: "Roboto";
-  color: #155f9e;
+  color: #1a98ff;
   font-size: clamp(24px, 3vw, 32px);
   margin-bottom: 16px;
   text-transform: uppercase;

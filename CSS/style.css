@@ -4,8 +4,9 @@ header {
   align-items: center;
   background: linear-gradient(to left, #1b7ee4 0%, #33a2ff 100%);
   padding: 1.2rem 1.2rem 1.2rem 3.2rem;
-  height: 8rem;
+  height: 150px;
   position: relative;
+  z-index: 200;
 }
 
 .logo {
@@ -486,7 +487,7 @@ h1 {
 .line {
   height: 5px;
   width: 280px;
-  background-color: #155f9e;
+  background-color: #1a98ff;
   display: flex;
   margin: 0 auto;
   margin-bottom: 12.8rem;
