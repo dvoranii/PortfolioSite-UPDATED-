@@ -22,9 +22,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  background: linear-gradient(to top, rgb(245, 245, 245) 0%, #fff 100%) center
-    no-repeat;
-  height: 100vh;
+  background-color: #fcfcfc;
 }
 
 ::selection {
@@ -41,13 +39,18 @@ body {
   margin: 0 auto;
 }
 
+.container-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
 }
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 9.6rem;
+  column-gap: 12px;
 }
 
 .grid--3--cols {
@@ -57,6 +60,41 @@ body {
 .heading-primary {
   font-family: "Roboto", sans-serif;
   color: #1a98ff;
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-size: clamp(24px, 3vw, 32px);
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: clamp(48px, 20vw, 54px);
+  font-family: "Roboto", sans-serif;
+  color: #222222;
+  letter-spacing: 1.5px;
+  padding-top: 96px;
+}
+
+.heading-tertiary {
+  font-family: "Roboto";
+  color: #155f9e;
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.service-img-container::before {
+  content: "";
+  display: block;
+  width: 70%;
+  padding-bottom: 70%;
+  background-image: linear-gradient(
+    209.25deg,
+    #00e5ff6c 13.05%,
+    #3cdec69f 88.99%
+  );
+  box-shadow: 0px 20px 80px #00e5ff56;
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 25%;
 }
