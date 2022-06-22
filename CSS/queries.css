@@ -1,0 +1,27 @@
+@media screen and (max-width: 912px) {
+}
+
+@media screen and (max-width: 512px) {
+  .nav-list {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 100%;
+    background: linear-gradient(to bottom, #005394 0%, #004e8af6 0%);
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    transform: translateX(200px);
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  /* .social-icons {
+    display: none;
+  }*/
+  .hero-btn-list-item {
+    padding-right: 0;
+  }
+}

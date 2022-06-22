@@ -1,0 +1,62 @@
+/* - Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128  */
+
+/* FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(14px, 2vw, 16px);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(to top, rgb(245, 245, 245) 0%, #fff 100%) center
+    no-repeat;
+  height: 100vh;
+}
+
+::selection {
+  background-color: #1a98ff;
+  color: #fff;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 9.6rem;
+}
+
+.grid--3--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.heading-primary {
+  font-family: "Roboto", sans-serif;
+  color: #1a98ff;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  margin-bottom: 3.2rem;
+}
