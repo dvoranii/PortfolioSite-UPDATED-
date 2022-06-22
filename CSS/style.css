@@ -265,6 +265,16 @@ h1 {
   font-size: 18px;
   letter-spacing: 0.35px;
 }
+
+.hero-link {
+  color: #fff;
+  transition: all 150ms ease;
+}
+
+.hero-link:hover {
+  text-shadow: 1px 1px 5px #33f1ffb2;
+}
+
 .laptop-img {
   padding: 24px;
   display: flex;
@@ -460,6 +470,11 @@ h1 {
 
 .section--services {
   margin-top: 9.6rem;
+  grid-template-rows: 1fr 1fr;
+}
+
+.design-box {
+  grid-column: 2;
 }
 
 #services {
@@ -497,6 +512,10 @@ h1 {
   width: 100%;
 }
 
+#service-img2 {
+  width: 90%;
+}
+
 .service-text {
   font-size: clamp(14px, 3vw, 18px);
   line-height: 1.5;
@@ -511,6 +530,30 @@ h1 {
   position: relative;
 }
 
+.img-container-2 {
+  grid-column: 2;
+}
+
+.img-container-2::before {
+  content: "";
+  display: block;
+  width: 65%;
+  height: 70%;
+  padding-bottom: 60%;
+  background: linear-gradient(136.25deg, #00b3ff 13.05%, #33a2ff 88.99%);
+  box-shadow: 25px 20px 80px #33a3ff9c;
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  top: 10%;
+  left: 28%;
+}
+
+#service-text-box-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
 #service-text-box-1::before {
   content: "";
   display: block;
@@ -518,7 +561,6 @@ h1 {
   width: 60%;
   height: 45%;
   left: 70%;
-  top: 130%;
   background: linear-gradient(209.25deg, #00e4ff 13.05%, #49ffe4 88.99%);
   opacity: 0.1;
   border-radius: 50%;
@@ -533,7 +575,7 @@ h1 {
   position: relative;
 }
 
-.service-text-box .text-box-3 {
+.service-text-box .text-box-2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
