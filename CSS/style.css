@@ -678,7 +678,8 @@ h1 {
 
 .skill {
   width: 70%;
-  height: clamp(200px, 33vw, 280px);
+  /* height: clamp(200px, 33vw, 280px); */
+  padding: 48px 24px 24px 24px;
   box-shadow: -5px 20px 20px rgba(0, 179, 255, var(--opacity));
   margin: 0 auto;
   border-radius: 10px;
@@ -690,6 +691,14 @@ h1 {
   background-color: rgba(255, 255, 255, 0.815);
 }
 
+.skill-description {
+  padding-top: 12px;
+  border-top: 1px solid grey;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
 .skill-text {
   font-size: clamp(18px, 3vw, 24px);
   font-weight: 600;
