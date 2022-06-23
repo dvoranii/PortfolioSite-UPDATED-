@@ -1,4 +1,15 @@
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1060px) {
+  .intro-text p {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: clamp(48px, 8vw, 56px);
+  }
+
+  .hero-job-title-text {
+    font-size: clamp(18px, 4vw, 28px);
+  }
 }
 
 @media screen and (max-width: 612px) {
@@ -10,8 +21,8 @@
     background: linear-gradient(to top, #32a0fe 0%, #1b7fe4 100%);
     flex-direction: column;
     justify-content: flex-start;
-    width: 200px;
-    transform: translateX(200px);
+    width: 100vw;
+    transform: translateX(100vw);
   }
   .nav-links-text {
     display: flex;
@@ -42,9 +53,10 @@
   .social-icon:hover {
     transform: scale(0.9);
   }
-}
 
-@media screen and (max-width: 612px) {
+  .nav-list {
+    animation: slideRight 250ms ease;
+  }
   .services-title-container {
     transform: scale(0.8);
   }

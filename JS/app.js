@@ -54,3 +54,17 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+
+// const instance = basicScroll.create({
+//   elem: document.querySelector(".skills-section"),
+//   from: "0px",
+//   to: "800px",
+//   props: {
+//     "--opacity": {
+//       from: 0.01,
+//       to: 0.99,
+//     },
+//   },
+// });
+
+// instance.start();

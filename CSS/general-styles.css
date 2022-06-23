@@ -13,11 +13,10 @@
 }
 
 html {
-  /* font-size: 62.5%; */
-  font-size: clamp(14px, 2vw, 16px);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* does not work on safari or MS Edge */
   scroll-behavior: smooth;
+  --opacity: 0.99%;
 }
 
 body {
@@ -46,10 +45,12 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0px 48px;
 }
 .container-2 {
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0px 48px;
 }
 
 .grid {
@@ -105,4 +106,8 @@ body {
   border-radius: 50%;
   left: 10%;
   bottom: 25%;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
 }
