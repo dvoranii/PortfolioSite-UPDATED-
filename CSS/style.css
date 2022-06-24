@@ -6,7 +6,7 @@ header {
   padding: 1.2rem 1.2rem 1.2rem 3.2rem;
   height: 150px;
   position: relative;
-  z-index: 200;
+  z-index: 5;
 }
 
 .logo {
@@ -301,7 +301,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   display: flex;
   gap: 48px;
-  z-index: 102;
+  /* z-index: 102; */
   margin-left: 12px;
   padding-top: 16px;
 }
@@ -679,7 +679,7 @@ h1 {
 .skill {
   width: 70%;
   /* height: clamp(200px, 33vw, 280px); */
-  padding: 48px 24px 24px 24px;
+  padding: 32px 48px 24px 32px;
   box-shadow: -5px 20px 20px rgba(0, 179, 255, var(--opacity));
   margin: 0 auto;
   border-radius: 10px;
@@ -695,7 +695,7 @@ h1 {
   padding-top: 12px;
   border-top: 1px solid grey;
   margin-top: 16px;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
   line-height: 1.5;
   text-align: center;
 }
@@ -704,6 +704,7 @@ h1 {
   font-weight: 600;
   font-family: "Roboto";
   color: #323232;
+  margin-bottom: 24px;
 }
 
 .skill:hover {
@@ -712,7 +713,7 @@ h1 {
 }
 
 .skill img {
-  margin-bottom: 2.4rem;
+  margin-bottom: 16px;
 }
 .aws-logo {
   width: 70%;
@@ -819,7 +820,7 @@ h1 {
 }
 
 .item-1 {
-  background-image: url("/assets/modal-img/banner-img.webp");
+  background-image: url("/assets/modal-img/portfolio-piece-1/banner-img.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -833,7 +834,133 @@ h1 {
 
 #projects-cta {
   text-align: center;
-  padding: 0px 24px 48px 24px;
+  padding: 0px 24px 64px 24px;
 
-  font-size: clamp(18px, 3vw, 24px) !important;
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+/* modals */
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* filter: brightness(0.3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-bg.active {
+  animation: fadeIn 150ms ease;
+}
+
+.modal {
+  max-width: calc(75vw + 4rem);
+  width: calc((90vh -2.5rem) / 0.5625);
+  background-color: white;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  padding: 16px;
+  min-height: 620px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+}
+
+.modal.active {
+  animation: fadeInSlideDown 350ms ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-width: 686px;
+}
+
+.modal-img-wrapper {
+  grid-column: 1;
+  grid-row: 2;
+  height: 200px;
+  padding-left: 24px;
+}
+
+.project-description {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 0px 24px 0px 24px;
+}
+
+.project-header {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 0px 24px;
+  position: relative;
+}
+
+.project-title {
+  align-self: center;
+}
+
+.close-btn {
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 150ms ease;
+  padding-right: 12px;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  color: rgb(53, 53, 53);
+}
+
+/* modal gallery */
+
+.gallery-img-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 12px 0px 12px 0px;
+  /* gap: 12px; */
+  max-width: 686px;
+}
+.gallery-img-wrapper img {
+  width: 25%;
+  max-width: 172px;
+  transition: all 150ms ease;
+  filter: grayscale(0.5);
+}
+.gallery-img-wrapper img:hover {
+  cursor: pointer;
+  filter: grayscale(0);
 }

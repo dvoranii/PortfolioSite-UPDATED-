@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="/CSS/general-styles.css" />
     <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="/CSS/queries.css" />
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/basicscroll/2.0.0/basicScroll.min.js"></script>
-    <script defer src="/JS/app.js"></script>
     <title>IldiDev &mdash; Web Development & Design</title>
   </head>
   <body>
@@ -234,38 +232,44 @@
             class="skill"
             fade
             >
+            <p class="skill-text js-text">Javascript</p>
                 <img class="js-logo" src="assets/skills-img/javascript-logo.webp" alt="">
-                <p class="skill-text js-text">Javascript</p>
+                
                 <p class="skill-description">Writing clean and maintainable javascript to bring functionality to web applications.</p>
 
             </div>
             <div class="skill"
             class="skill"
             >
+            <p class="skill-text">CSS3</p>
                 <img class="css-logo" src="/assets/skills-img/css-logo.webp" alt="">
-                <p class="skill-text">CSS3</p>
+                
                 <p class="skill-description">Utilizing CSS and CSS preprocessors like SCSS and SASS to implement interface designs and help minimize the use of javascript to help with performance.</p>
             </div>
             <div class="skill"
             >
+            <p class="skill-text">HTML5</p>
                 <img class="html-logo" src="assets/skills-img//html-logo.webp" alt="">
-                <p class="skill-text">HTML5</p>
+                
                 <p class="skill-description">Writing well-structured, AODA compliant HTML markup for websites, web applications, HTML Emails and more.</p>
             </div>
 
             <div class="skill">
-                <img class="angular-logo" src="assets/skills-img/AngularJS-Shield.svg" alt="">
                 <p class="skill-text">Angular</p>
+                <img class="angular-logo" src="assets/skills-img/AngularJS-Shield.svg" alt="">
+                
                 <p class="skill-description">Using Angular 2+ with typescript to create full-stack web applications using the MVVM design pattern.</p>
             </div>
             <div class="skill">
-                <img class="aws-logo" src="assets/skills-img/Amazon-Web-Services-AWS-Logo.png" alt="">
                 <p class="skill-text aws-text">AWS</p>
+                <img class="aws-logo" src="assets/skills-img/Amazon-Web-Services-AWS-Logo.png" alt="">
+                
                 <p class="skill-description">Deploying web applications and privisioning the apporpriate server infrastrcture for each particular use case.</p>
             </div>
             <div class="skill">
-                <img class="ps-logo" src="assets/skills-img/Adobe-Photoshop-Logo.png" alt="">
                 <p class="skill-text">Photoshop</p>
+                <img class="ps-logo" src="assets/skills-img/Adobe-Photoshop-Logo.png" alt="">
+                
                 <p class="skill-description">Several years of experience editing web assets and creating design wireframes using Adobe Photoshop and Illustrator.</p>
             </div>
 
@@ -293,9 +297,9 @@
 
             </div>
             
-            <div class="image-box-2">
+            <div class="image-box image-box-2">
                 <div class="item item-2"></div>
-                <div class="textbox-2">
+                <div class="textbox textbox-2">
                     <h2>GM Plumbing Website</h2>
                     <p>*Under Construction</p>
                 </div>
@@ -303,9 +307,39 @@
             </div>
             
         </div>
-
-
     </section>
 
+    <!-- MODALS -->
+
+    <div class="modal-bg">
+        <div class="modal grid">
+            <div class="project-header">
+                <h2 class="project-title">OG Creations Recording Studio Website</h2>
+                <p class="close-btn">&times;</p>
+            </div>
+
+            <!-- <div class="modal-line">&nbsp;</div> -->
+                <div class="modal-img-wrapper">
+                    <img src="/assets/modal-img/portfolio-piece-1/banner-img.webp" alt="" class="modal-img current-img">
+
+                        <div class="gallery-img-wrapper">
+                            <img src="/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png" alt="">
+                            <img src="/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png" alt="">
+                            <img src="/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png" alt="">
+                            <img src="/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png" alt="">
+                        </div>
+                    </div>
+                <div class="project-description">
+                    <p class="modal-paragraph"> A 14 page mobile responsive website including browser animations, testimonial carousel, image gallery, and validated contact forms.
+                        Form submissions are submitted as JSON objects and stored using <a class="modal-link" href="https://firebase.google.com/" onclick="window.open(this.href,'_blank')" title="https://firebase.google.com/"> Google Firebase</a> Realtime Database (NoSQL). The owners are alerted of form submissions 
+                        by email through HTTP POST requests sent to an activated <a class="modal-link" href="https://formspree.io/" onclick="window.open(this.href,'_blank')" title="https://formspree.io/">Formspree</a> form URL.</p>
+                </div>
+
+
+        </div>
+    </div>
+    <script defer src="/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/basicscroll/2.0.0/basicScroll.min.js"></script>
+    <script src="/JS/app.js"></script>
   </body>
 </html>

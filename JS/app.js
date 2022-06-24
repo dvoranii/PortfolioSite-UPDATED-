@@ -68,3 +68,44 @@ obs.observe(sectionHeroEl);
 // });
 
 // instance.start();
+
+const textBox = document.querySelectorAll(".textbox");
+const item = document.querySelectorAll(".item");
+const imgBox = document.querySelector(".image-box");
+
+const modalBg = document.querySelector(".modal-bg");
+const modal = document.querySelector(".modal");
+
+const closeBtn = document.querySelector(".close-btn");
+
+textBox.forEach((box) => {
+  box.addEventListener("click", () => {
+    showModal();
+  });
+});
+
+item.forEach((item) => {
+  item.addEventListener("click", () => {
+    showModal();
+  });
+});
+
+function showModal() {
+  modalBg.classList.add("active");
+  modalBg.style.visibility = "visible";
+  modalBg.style.opacity = 1;
+
+  modal.classList.add("active");
+  modal.style.visibility = "visible";
+  modal.style.opacity = 1;
+}
+
+closeBtn.addEventListener("click", () => {
+  modalBg.classList.remove("active");
+  modalBg.style.visibility = "hidden";
+  modalBg.style.opacity = 0;
+
+  modal.classList.remove("active");
+  modal.style.visibility = "hidden";
+  modal.style.opacity = 0;
+});
