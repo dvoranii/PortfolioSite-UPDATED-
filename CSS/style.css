@@ -868,7 +868,7 @@ h1 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.2fr 1fr 0.2fr;
   padding: 16px;
-  min-height: 620px;
+  height: 35vw;
   opacity: 0;
   visibility: hidden;
   z-index: 8;
@@ -910,10 +910,10 @@ h1 {
   grid-column: 1;
   grid-row: 2;
   height: 200px;
-  padding-left: 24px;
+  margin: 0 auto;
 }
 
-.project-description {
+.project-details {
   grid-column: 2;
   grid-row: 2;
   padding: 0px 24px 0px 24px;
@@ -929,6 +929,10 @@ h1 {
 
 .project-title {
   align-self: center;
+}
+
+.modal-paragraph {
+  font-size: clamp(16px, 2vw, 18px);
 }
 
 .close-btn {
@@ -964,3 +968,67 @@ h1 {
   cursor: pointer;
   filter: grayscale(0);
 }
+
+.tech-item img {
+  width: clamp(40px, 65%, 100px);
+}
+
+.tech-icons-list {
+  display: flex;
+  list-style: none;
+}
+
+.tech-icons {
+  padding-top: 24px;
+}
+.modal-btns {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.modal-btns button {
+  display: flex;
+  width: 250px;
+}
+
+.icon-wrapper {
+  display: flex;
+  text-align: center;
+  width: 200%;
+  padding: 12px;
+}
+
+.icon-wrapper img {
+  max-width: 20%;
+  padding-inline-start: 12px;
+}
+
+.icon-wrapper span {
+  padding-left: 16px;
+  align-self: center;
+  font-size: clamp(12px, 2vw, 16px);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.modal-btns a:link,
+.modal-btns a:visited {
+  text-decoration: none;
+}
+
+.live-demo-btn {
+  border: 3px solid #1b7ee4;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #1b7ee4;
+  font-weight: bold;
+}
+
+#modal-laptop-icon {
+  filter: brightness(0);
+}
+/* .live-demo-text {
+  width: 100%;
+} */
