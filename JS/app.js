@@ -33,6 +33,7 @@ btnNavEl.addEventListener("click", () => {
 // Sticky Nav
 
 const sectionHeroEl = document.querySelector(".hero-section");
+const contactSection = document.querySelector(".contact-section");
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -54,11 +55,12 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+// obs.observe(contactSection);
 
 // const instance = basicScroll.create({
 //   elem: document.querySelector(".skills-section"),
-//   from: "0px",
-//   to: "800px",
+//   from: "top-top",
+//   to: "bottom-middle",
 //   props: {
 //     "--opacity": {
 //       from: 0.01,
@@ -223,12 +225,13 @@ function validateForm(name, email) {
     !errorEmail.classList.contains("display")
   ) {
     // window.location.href = "thank-you.html";
-    messageSuccess.classList.add("active");
-    setTimeout(() => {
-      messageSuccess.classList.remove("active");
-      form.reset();
-    }, 3000);
+    // messageSuccess.classList.add("active");
+    // setTimeout(() => {
+    //   messageSuccess.classList.remove("active");
+    //   form.reset();
+    // }, 3000);
 
     valid = true;
+    form.reset();
   }
 }
