@@ -1,6 +1,54 @@
+@media screen and (max-width: 1346px) {
+  .project-title {
+    font-size: 18px;
+  }
+
+  .modal-paragraph {
+    font-size: clamp(14px, 1vw, 18px);
+  }
+
+  .tech-item img {
+    width: clamp(30px, 40%, 100px);
+  }
+
+  .modal-btns {
+    margin-top: 18px;
+  }
+
+  .modal-btns button {
+    width: clamp(135px, 30vw, 188px);
+  }
+
+  .tech-icons {
+    padding-top: 24px;
+  }
+
+  .project-header {
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-paragraph {
+    font-size: 12px;
+  }
+
+  .modal {
+    height: 32vw;
+  }
+}
+
 @media screen and (max-width: 1060px) {
   .intro-text p {
     max-width: 80%;
+  }
+
+  .modal-btns button {
+    width: clamp(135px, 30vw, 159px);
+  }
+
+  .modal-btns span {
+    font-size: 10px;
   }
 
   h1 {
@@ -10,8 +58,47 @@
   .hero-job-title-text {
     font-size: clamp(18px, 4vw, 28px);
   }
+
+  .project-title {
+    font-size: 16px;
+  }
+
+  .project-header {
+    padding-bottom: 4px;
+  }
+
+  /* .modal {
+    height: 32vw;
+  } */
 }
 
+@media screen and (max-width: 961px) {
+  .modal {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .tech-icons {
+    padding-top: 18px;
+  }
+
+  .modal {
+    height: 40vw;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .modal-btns {
+    margin-top: 12px;
+  }
+
+  .tech-item img {
+    width: clamp(25px, 40%, 100px);
+  }
+
+  /* .tech-item img {
+    width: 25px;
+  } */
+}
 @media screen and (max-width: 612px) {
   .nav-list {
     position: absolute;
