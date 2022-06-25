@@ -1251,3 +1251,111 @@ label {
   top: 92%;
   display: block;
 }
+
+/* FOOTER */
+.footer {
+  height: 25vh;
+  grid-template-columns: 3fr 2fr 2fr;
+}
+
+.footer-logo-container p {
+  padding-top: 2rem;
+}
+
+.ildidev-logo-2 {
+  width: 15%;
+  margin-right: 2.4rem;
+  opacity: 80%;
+}
+.legal {
+  display: flex;
+  align-items: center;
+  padding-left: 4.6rem;
+}
+
+.legal p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+}
+.footer-list {
+  margin-top: 1.2rem;
+  list-style: none;
+}
+
+.footer-list li {
+  margin-bottom: 1.2rem;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+
+.footer-list a:link,
+.footer-list a:visited {
+  text-decoration: none;
+  color: #333;
+  transition: all 150ms ease-in-out;
+}
+
+.footer-list a:hover {
+  text-shadow: 1px 1px 5px #33ebffd8;
+}
+
+.footer-socials {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: repeat(5, 1fr);
+  position: relative;
+}
+
+.social-title-wrapper {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  grid-column: span 2;
+}
+.social-title {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #0d79de;
+}
+
+.footer-nav-title {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #0d79de;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social-icon-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.social-text-wrapper {
+  grid-column: 2;
+  margin-top: 5px;
+  margin-left: 12px;
+}
+
+.social-icon-wrapper,
+.social-text-wrapper {
+  margin-bottom: 1.2rem;
+}
+
+.social-text-wrapper a {
+  color: #222;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+.social-text-wrapper a:hover {
+  text-shadow: 1px 1px 5px #33ebffd8;
+}
