@@ -223,11 +223,11 @@ function validateForm(name, email) {
     !errorEmail.classList.contains("display")
   ) {
     // window.location.href = "thank-you.html";
-    // messageSuccess.classList.add("active");
-    // setTimeout(() => {
-    //   messageSuccess.classList.remove("active");
-    //   form.reset();
-    // }, 3000);
+    messageSuccess.classList.add("active");
+    setTimeout(() => {
+      messageSuccess.classList.remove("active");
+      form.reset();
+    }, 3000);
 
     valid = true;
   }
