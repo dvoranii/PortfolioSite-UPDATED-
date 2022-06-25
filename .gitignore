@@ -1,2 +1,2 @@
 #ignore api keys
-/api-key.json
+*.json
