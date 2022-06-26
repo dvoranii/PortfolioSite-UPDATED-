@@ -230,3 +230,9 @@
     height: 95vh;
   }
 }
+
+@media screen and (max-width: 914px) and (max-height: 414px) {
+  .modal-img-wrapper {
+    display: none;
+  }
+}
