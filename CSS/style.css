@@ -504,7 +504,6 @@ h1 {
 
 .section--services {
   margin-top: 9.6rem;
-  grid-template-rows: 1fr 1fr;
 }
 
 .design-box {
@@ -944,7 +943,7 @@ h1 {
 }
 
 .project-title {
-  align-self: center;
+  /* align-self: center; */
 }
 
 .project-title.mobile {

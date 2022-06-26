@@ -39,6 +39,10 @@
 }
 
 @media screen and (max-width: 1060px) {
+  .skills-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .intro-text p {
     max-width: 80%;
   }
@@ -86,6 +90,7 @@
 
   .project-title.mobile {
     display: block;
+    text-align: center;
   }
 
   .project-title.desktop {
@@ -98,11 +103,18 @@
   .modal-img-wrapper {
     display: flex;
     padding-top: 24px;
+    overflow: hidden;
+    max-width: 60%;
   }
 
   .modal-img {
     align-self: center;
+    width: 100%;
     /* border-radius: 0px; */
+  }
+
+  .gallery-img-wrapper {
+    width: 100%;
   }
 
   .tech-icons {
@@ -118,12 +130,23 @@
 
   .modal-paragraph {
     font-size: clamp(14px, 1vw, 18px);
+    /* padding: 0px 142px; */
   }
 
   .modal-btns {
     display: flex;
     justify-content: center;
-    padding-top: 32px;
+    padding-top: 16px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-height: 912px) {
+  .modal {
+    height: 57vh;
   }
 }
 
@@ -136,10 +159,78 @@
     width: clamp(25px, 40%, 100px);
   }
 
-  /* .tech-item img {
-    width: 25px;
-  } */
+  .grid.grid--2-cols.service-divs {
+    display: block;
+  }
+
+  #service-text-box-1 {
+    padding-right: 0px;
+  }
+
+  #service-text-box-2 {
+    padding-top: 24px;
+  }
+
+  .service-text-box {
+    text-align: center;
+  }
+
+  .see-more {
+    justify-content: center;
+  }
+
+  .text-box-2 {
+    padding-bottom: 32px;
+  }
+
+  #services {
+    margin-bottom: 128px;
+  }
 }
+
+/* IPad */
+/* @media screen and (min-width: 820px) and (max-height: 1200px) {
+  .modal {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 820px) {
+  .modal {
+    height: 50vh;
+  }
+} */
+
+/* Surface Duo */
+
+@media screen and (max-width: 720px) and (max-height: 540px) {
+  .modal-img-wrapper {
+    display: none;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+}
+
+/* Surface Pro */
+/* @media screen and (min-width: 912px) and (max-height: 1368px) {
+  .modal {
+    height: 60vh;
+  }
+
+  .modal-btns {
+    padding-top: 12px;
+  }
+} */
+
 @media screen and (max-width: 612px) {
   .nav-list {
     position: absolute;
@@ -188,6 +279,19 @@
   .services-title-container {
     transform: scale(0.8);
   }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .portfolio-items {
+    display: block;
+  }
+
+  .image-box {
+    padding-bottom: 48px;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -225,14 +329,49 @@
   }
 }
 
-@media screen and (max-width: 375px), screen and (max-height: 700px) {
-  .modal {
-    height: 95vh;
+@media screen and (max-width: 915px) and (max-height: 414px) {
+  .modal-img-wrapper {
+    display: none;
   }
 }
 
-@media screen and (max-width: 914px) and (max-height: 414px) {
-  .modal-img-wrapper {
-    display: none;
+@media screen and (max-width: 280px) {
+  .modal-paragraph {
+    font-size: 12px;
+  }
+
+  .modal-btns button {
+    width: 140px;
+  }
+
+  .icon-wrapper span {
+    padding-left: 4px;
+  }
+  #modal-laptop-icon,
+  #modal-gh-icon {
+    padding-left: 4px;
+  }
+
+  .close-btn {
+    font-size: 24px;
+  }
+
+  .project-title {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 653px) and (max-height: 280px) {
+  .project-title {
+    font-size: 14px;
+  }
+
+  .modal-paragraph {
+    font-size: 12px;
+  }
+
+  .modal-btns {
+    padding-top: 0px;
   }
 }
