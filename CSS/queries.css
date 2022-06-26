@@ -189,3 +189,44 @@
     transform: scale(0.8);
   }
 }
+
+@media screen and (max-width: 414px) {
+  .modal-btns span {
+    font-size: 10px;
+  }
+
+  .modal-btns {
+    transform: scale(0.8);
+    padding-top: 0px;
+    max-width: 100%;
+  }
+
+  .modal-btns button {
+    width: 160px;
+  }
+  .tech-icons-list {
+    max-width: 100%;
+  }
+
+  .tech-item img {
+    width: clamp(30px, 40%, 100px);
+  }
+
+  .modal {
+    height: 75vh;
+  }
+
+  .project-title {
+    font-size: 14px;
+  }
+
+  .icon-wrapper span {
+    padding-left: 8px;
+  }
+}
+
+@media screen and (max-width: 375px), screen and (max-height: 700px) {
+  .modal {
+    height: 95vh;
+  }
+}

@@ -112,6 +112,23 @@ closeBtn.addEventListener("click", () => {
   modal.style.opacity = 0;
 });
 
+// image swapping for modal
+// might use flickity here
+// Look into making videos for projects
+
+let galleryItem = document.querySelectorAll("#gallery-item");
+let currentImg = document.querySelector(".current-img");
+
+let placeholderSrc;
+
+galleryItem.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    placeholderSrc = e.currentTarget.src;
+    e.currentTarget.src = currentImg.src;
+    currentImg.src = placeholderSrc;
+  });
+});
+
 // form validation
 
 function getAPIKey(url) {

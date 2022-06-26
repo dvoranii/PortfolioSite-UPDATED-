@@ -999,7 +999,6 @@ h1 {
 
 .tech-item {
   display: flex;
-  justify-content: center;
 }
 
 .tech-item img {
@@ -1009,7 +1008,7 @@ h1 {
 .tech-icons-list {
   display: flex;
   list-style: none;
-  max-width: 75%;
+  max-width: 64%;
 }
 
 .tech-icons {
