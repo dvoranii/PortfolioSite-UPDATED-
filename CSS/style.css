@@ -1119,7 +1119,6 @@ h1 {
 
 .contact-form.grid.grid--2--cols {
   display: grid;
-  row-gap: 1.2rem;
   column-gap: 3.6rem;
 }
 

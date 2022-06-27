@@ -1,0 +1,54 @@
+{
+  "Project-1": {
+    "title": "OG Creations Recording Studio Website",
+    "description": "A 14 page mobile responsive website including browser animations, testimonial carousel, image gallery, and validated contact forms. Form submissions are submitted as JSON objects and stored using Google Firebase Realtime Database (NoSQL). The owners are alerted of form submissions by email through HTTP POST requests sent to an activated Formspree form URL.",
+    "images": {
+      "currentImg": "/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png",
+      "imgGallery": {
+        "item1": "/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png",
+        "item2": "/assets/modal-img/portfolio-piece-1/OG-gallery-img(2).png",
+        "item3": "/assets/modal-img/portfolio-piece-1/OG-gallery-img(3).png",
+        "item4": "/assets/modal-img/portfolio-piece-1/OG-gallery-img(1).png"
+      }
+    },
+    "techIcons": {
+      "icon1": "/assets/modal-img/angular-modal.png",
+      "icon2": "/assets/modal-img/typescript.png",
+      "icon3": "/assets/modal-img/css-modal.png",
+      "icon4": "/assets/modal-img/html-modal.png",
+      "icon5": "/assets/modal-img/firebase-modal.png",
+      "icon6": "/assets/modal-img/photoshop-modal.png"
+    },
+
+    "btnLinks": {
+      "liveSite": "https://www.ogcreations.ca/",
+      "repo": "https://github.com/dvoranii/og-creations-website"
+    }
+  },
+  "Project-2": {
+    "title": "GM Plumbing Website",
+    "description": "This website is currently under construction. It will be multiple page wordpress based application using custom CSS and Javascript. It will be custom designed with image galleries, a testimonial carousel, and contact forms.",
+    "images": {
+      "currentImg": "/assets/modal-img/portfolio-piece-2/Plumbing.jpg",
+      "imgGallery": {
+        "item1": "/assets/modal-img/portfolio-piece-2/bathroom.avif",
+        "item2": "/assets/modal-img/portfolio-piece-2/sink.avif",
+        "item3": "/assets/modal-img/portfolio-piece-2/waterpipes.avif",
+        "item4": "/assets/modal-img/portfolio-piece-2/plumbing-orange-wrench.jpg"
+      }
+    },
+    "techIcons": {
+      "icon1": "/assets/skills-img/Wordpress_Blue_logo.png",
+      "icon2": "/assets/skills-img/javascript-logo.webp",
+      "icon3": "/assets/skills-img/css-logo.webp",
+      "icon4": "/assets/modal-img/html-modal.png",
+      "icon5": "/assets/skills-img/php.png",
+      "icon6": "/assets/skills-img/Adobe-Photoshop-Logo.png"
+    },
+
+    "btnLinks": {
+      "liveSite": "#",
+      "repo": "#"
+    }
+  }
+}
