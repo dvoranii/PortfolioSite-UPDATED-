@@ -72,23 +72,20 @@ obs.observe(sectionHeroEl);
 // instance.start();
 
 // Fetch modal
-
+let index = 0;
 let htmlTemplate;
+let templateArray = [];
 let modalContainer = document.querySelector(".modal");
 
-const getModal = (container, title) => {
+const getModal = (container, index) => {
   fetch("/models/projects.json")
     .then((res) => {
-      console.log(res);
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       let projArr = Object.entries(data);
 
       projArr.forEach((project, i, arr) => {
-        // console.log(project, i, arr);
-        console.log(project[1].title);
         htmlTemplate = `
         <h2 class="project-title mobile">${project[1].title}</h2>
         <div class="modal-img-wrapper">
@@ -137,20 +134,18 @@ const getModal = (container, title) => {
                         </button>
                     </a>
                  </div>
-
-        </div>
+                 </div>
         `;
 
-        if (project[1].title === title) {
-          container.insertAdjacentHTML("beforeend", htmlTemplate);
-        } else {
-          return;
+        //
+        if (i + 1 == index) {
+          container.insertAdjacentHTML("afterbegin", htmlTemplate);
         }
       });
     });
 };
 
-getModal(modalContainer, "OG Creations Recording Studio Website");
+// getModal(modalContainer, "OG Creations Recording Studio Website");
 
 const textBox = document.querySelectorAll(".textbox");
 const item = document.querySelectorAll(".item");
@@ -159,19 +154,29 @@ const imgBox = document.querySelector(".image-box");
 const modalBg = document.querySelector(".modal-bg");
 const modal = document.querySelector(".modal");
 
-const closeBtn = document.querySelector(".close-btn");
+let closeBtn = document.querySelector(".close-btn");
 
 textBox.forEach((box) => {
-  box.addEventListener("click", () => {
-    showModal();
+  box.addEventListener("click", (e) => {
+    modalContainer.insertAdjacentElement("afterbegin", closeBtn);
+    getIndex(e);
   });
 });
 
 item.forEach((item) => {
-  item.addEventListener("click", () => {
-    showModal();
+  item.addEventListener("click", (e) => {
+    modalContainer.insertAdjacentElement("afterbegin", closeBtn);
+    getIndex(e);
   });
 });
+
+// get index of target element then get modal with said index, then show modal
+function getIndex(e) {
+  e.preventDefault();
+  index = e.currentTarget.classList[1].slice(-1);
+  getModal(modalContainer, index);
+  showModal();
+}
 
 function showModal() {
   modalBg.classList.add("active");
@@ -183,6 +188,18 @@ function showModal() {
   modal.style.opacity = 1;
 }
 
+let closeBtnChild;
+
+function clearContainer() {
+  let lc = modalContainer.firstChild;
+
+  while (lc.nextSibling) {
+    modalContainer.removeChild(lc.nextSibling);
+  }
+}
+
+// clearContainer();
+
 closeBtn.addEventListener("click", () => {
   modalBg.classList.remove("active");
   modalBg.style.visibility = "hidden";
@@ -191,6 +208,8 @@ closeBtn.addEventListener("click", () => {
   modal.classList.remove("active");
   modal.style.visibility = "hidden";
   modal.style.opacity = 0;
+
+  clearContainer();
 });
 
 // image swapping for modal
