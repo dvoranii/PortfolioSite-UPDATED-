@@ -85,12 +85,13 @@ const getModal = (container, index) => {
     .then((data) => {
       let projArr = Object.entries(data);
 
-      projArr.forEach((project, i, arr) => {
+      projArr.forEach((project, i) => {
         htmlTemplate = `
         <h2 class="project-title mobile">${project[1].title}</h2>
         <div class="modal-img-wrapper">
             <img src="${project[1].images.currentImg}" alt="" class="modal-img current-img">
 
+            <!-- use a loop to do this -->
                 <div class="gallery-img-wrapper">
                     <img src="${project[1].images.imgGallery.item1}" id="gallery-item" alt="">
                     <img src="${project[1].images.imgGallery.item2}" id="gallery-item" alt="">
@@ -104,6 +105,7 @@ const getModal = (container, index) => {
             </div>
             <p class="modal-paragraph">${project[1].description}</p>
 
+            <!-- use a loop to do this -->
                 <div class="tech-icons">
                     <ul class="tech-icons-list">
                         <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon1}" alt=""></li>
@@ -134,8 +136,7 @@ const getModal = (container, index) => {
                         </button>
                     </a>
                  </div>
-                 </div>
-        `;
+                 </div>`;
 
         //
         if (i + 1 == index) {
@@ -156,19 +157,17 @@ const modal = document.querySelector(".modal");
 
 let closeBtn = document.querySelector(".close-btn");
 
-textBox.forEach((box) => {
-  box.addEventListener("click", (e) => {
-    modalContainer.insertAdjacentElement("afterbegin", closeBtn);
-    getIndex(e);
+function chooseProject(item) {
+  item.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      modalContainer.insertAdjacentElement("afterbegin", closeBtn);
+      getIndex(e);
+    });
   });
-});
+}
 
-item.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    modalContainer.insertAdjacentElement("afterbegin", closeBtn);
-    getIndex(e);
-  });
-});
+chooseProject(textBox);
+chooseProject(item);
 
 // get index of target element then get modal with said index, then show modal
 function getIndex(e) {
@@ -216,6 +215,7 @@ closeBtn.addEventListener("click", () => {
 // might use flickity here
 // Look into making videos for projects
 
+// Turn this into a function and call it when clicking on an item
 let galleryItem = document.querySelectorAll("#gallery-item");
 let currentImg = document.querySelector(".current-img");
 
