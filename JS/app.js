@@ -55,21 +55,37 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
-// obs.observe(contactSection);
 
-// const instance = basicScroll.create({
+// Basic scroll
+
+function scrollAnimWrapper(params) {
+  if (!params.elem) return;
+  basicScroll.create(params).start();
+}
+
+// scrollAnimWrapper({
 //   elem: document.querySelector(".skills-section"),
 //   from: "top-top",
 //   to: "bottom-middle",
 //   props: {
-//     "--opacity": {
-//       from: 0.01,
-//       to: 0.99,
+//     "--brightness": {
+//       from: "0%",
+//       to: "100%",
 //     },
 //   },
 // });
 
-// instance.start();
+scrollAnimWrapper({
+  elem: document.querySelector(".skills-section"),
+  from: "top-middle",
+  to: "bottom-middle",
+  props: {
+    "--scroll": {
+      from: 0,
+      to: 0.2,
+    },
+  },
+});
 
 // Fetch modal
 let index = 0;

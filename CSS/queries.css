@@ -247,13 +247,11 @@
     display: flex;
     padding-bottom: 24px;
     transition: all 250ms ease;
+    font-size: 18px;
   }
   .nav-links-text:hover {
     transform: translateY(-2px);
     cursor: pointer;
-  }
-  .nav-links-text:nth-child(1) {
-    padding-top: 10vh;
   }
   .btn-mobile-nav {
     display: block;
@@ -291,6 +289,10 @@
 
   .image-box {
     padding-bottom: 48px;
+  }
+
+  .textbox {
+    height: 350px;
   }
 }
 
