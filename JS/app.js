@@ -76,6 +76,7 @@ let index = 0;
 let htmlTemplate;
 let templateArray = [];
 let modalContainer = document.querySelector(".modal");
+let galleryTemplate;
 
 const getModal = (container, index) => {
   fetch("/models/projects.json")
@@ -84,7 +85,6 @@ const getModal = (container, index) => {
     })
     .then((data) => {
       let projArr = Object.entries(data);
-
       projArr.forEach((project, i) => {
         htmlTemplate = `
         <h2 class="project-title mobile">${project[1].title}</h2>
@@ -109,11 +109,11 @@ const getModal = (container, index) => {
                 <div class="tech-icons">
                     <ul class="tech-icons-list">
                         <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon1}" alt=""></li>
-                        <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon2}" alt=""></li>
-                        <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon3}" alt=""></li>
-                        <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon4}" alt=""></li>
-                        <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon5}" alt=""></li>
-                        <li class="tech-item tech-item-1"><img src="${project[1].techIcons.icon6}" alt=""></li>
+                        <li class="tech-item tech-item-2" id="tech-icon"><img src="${project[1].techIcons.icon2}" alt=""></li>
+                        <li class="tech-item tech-item-3" id="tech-icon"><img src="${project[1].techIcons.icon3}" alt=""></li>
+                        <li class="tech-item tech-item-4" id="tech-icon"><img src="${project[1].techIcons.icon4}" alt=""></li>
+                        <li class="tech-item tech-item-5" id="tech-icon"><img src="${project[1].techIcons.icon5}" alt=""></li>
+                        <li class="tech-item tech-item-6" id="tech-icon"><img src="${project[1].techIcons.icon6}" alt=""></li>
                     </ul>
                 </div>
 
@@ -169,7 +169,6 @@ function chooseProject(item) {
 chooseProject(textBox);
 chooseProject(item);
 
-// get index of target element then get modal with said index, then show modal
 function getIndex(e) {
   e.preventDefault();
   index = e.currentTarget.classList[1].slice(-1);
@@ -177,6 +176,7 @@ function getIndex(e) {
   showModal();
 }
 
+// get index of target element then get modal with said index
 function showModal() {
   modalBg.classList.add("active");
   modalBg.style.visibility = "visible";
@@ -187,17 +187,13 @@ function showModal() {
   modal.style.opacity = 1;
 }
 
-let closeBtnChild;
-
+// clear modal container after closing modal
 function clearContainer() {
   let lc = modalContainer.firstChild;
-
   while (lc.nextSibling) {
     modalContainer.removeChild(lc.nextSibling);
   }
 }
-
-// clearContainer();
 
 closeBtn.addEventListener("click", () => {
   modalBg.classList.remove("active");
@@ -231,8 +227,7 @@ galleryItem.forEach((item) => {
   });
 });
 
-// form validation
-
+// Google Firebase Connection
 function getAPIKey(url) {
   fetch(url)
     .then((res) => {
@@ -259,10 +254,7 @@ const messagesRef = firebase.database().ref("messages");
 const form = document.getElementById("contactForm");
 let errorName = document.querySelector(".errorName");
 let errorEmail = document.querySelector(".errorEmail");
-// const errorEmail2 = document.querySelector(".errorEmail2");
-
 const messageSuccess = document.querySelector(".success");
-
 const emailErrorMsg1 = "*Please enter an email address";
 const emailErrorMsg2 = "*Please enter a valid email address (123@example.com)";
 
@@ -301,6 +293,7 @@ function saveMessage(name, email, message) {
   });
 }
 
+// form validation
 function validateForm(name, email) {
   //   Nothing entered in name field
   if (name === "" || name == null) {

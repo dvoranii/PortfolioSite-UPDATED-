@@ -26,7 +26,7 @@
     }
   },
   "Project-2": {
-    "title": "GM Plumbing Website",
+    "title": "Wordpress Themes",
     "description": "This website is currently under construction. It will be multiple page wordpress based application using custom CSS and Javascript. It will be custom designed with image galleries, a testimonial carousel, and contact forms.",
     "images": {
       "currentImg": "/assets/modal-img/portfolio-piece-2/Plumbing.jpg",
@@ -39,11 +39,11 @@
     },
     "techIcons": {
       "icon1": "/assets/skills-img/Wordpress_Blue_logo.png",
-      "icon2": "/assets/skills-img/javascript-logo.webp",
+      "icon2": "/assets/modal-img/javascript-logo-new.jpg",
       "icon3": "/assets/skills-img/css-logo.webp",
       "icon4": "/assets/modal-img/html-modal.png",
-      "icon5": "/assets/skills-img/php.png",
-      "icon6": "/assets/skills-img/Adobe-Photoshop-Logo.png"
+      "icon5": "assets/modal-img/php-logo-new.avif",
+      "icon6": "/assets/modal-img/photoshop-modal.png"
     },
 
     "btnLinks": {

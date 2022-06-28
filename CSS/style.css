@@ -751,6 +751,18 @@ h1 {
   width: 40%;
 }
 
+.node-logo {
+  width: 70%;
+}
+
+.wp-logo {
+  width: 60%;
+}
+
+.php-logo {
+  width: 70%;
+}
+
 /* Portfolio section */
 .portfolio-items {
   grid-template-columns: 1fr 1fr;
@@ -998,21 +1010,28 @@ h1 {
 
 .tech-item {
   display: flex;
+  justify-content: center;
+  min-width: 16.5%;
 }
 
 .tech-item img {
-  width: clamp(40px, 40%, 100px);
+  /* width: clamp(40px, 40%, 100px); */
+  width: 60%;
 }
 
 .tech-icons-list {
   display: flex;
   list-style: none;
-  max-width: 64%;
+  /* max-width: 64%; */
 }
 
+#tech-icon {
+  max-width: 15%;
+}
 .tech-icons {
   padding-top: 32px;
 }
+
 .modal-btns {
   display: flex;
   gap: 24px;
