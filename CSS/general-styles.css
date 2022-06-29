@@ -16,7 +16,6 @@ html {
   overflow-x: hidden;
   /* does not work on safari or MS Edge */
   scroll-behavior: smooth;
-  /* --brightness: 0%; */
   /* --bg: hsl(odeg, 0%, var(--brightness)); */
 }
 
