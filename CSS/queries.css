@@ -42,7 +42,7 @@
   }
 
   .modal {
-    height: 33vw;
+    height: 40vw;
   }
 }
 
@@ -52,7 +52,13 @@
   }
 
   .intro-text p {
-    max-width: 80%;
+    max-width: 100%;
+    z-index: 4;
+  }
+
+  .laptop-img img {
+    max-width: 265%;
+    margin-right: 40px;
   }
 
   /* .modal {
@@ -71,7 +77,7 @@
   }
 
   .hero-job-title-text {
-    font-size: clamp(18px, 4vw, 28px);
+    font-size: clamp(24px, 4.5vw, 28px);
   }
 
   .icon-wrapper {
@@ -127,6 +133,12 @@
   #services {
     margin-bottom: 128px;
   }
+
+  .laptop-img img {
+    margin-right: -35px;
+    margin-top: -8px;
+    max-width: 320%;
+  }
 }
 
 /* Surface Duo */
@@ -169,6 +181,27 @@
 
   .contact-form {
     width: 80%;
+  }
+
+  .hero-btns {
+    padding-top: 24px;
+  }
+
+  .intro-text {
+    display: flex;
+    align-items: center;
+    grid-column: span 2;
+    padding-left: 0px;
+    padding-bottom: 24px;
+  }
+
+  .intro-text p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .laptop-img img {
+    display: none;
   }
 }
 
@@ -241,7 +274,7 @@
   .modal {
     grid-template-columns: 1fr;
     grid-template-rows: 0.7fr 1fr;
-    height: 110vw;
+    height: 120vw;
   }
 
   .modal-paragraph {
@@ -291,6 +324,14 @@
     height: 135vw;
   }
 
+  .hero.container {
+    padding: 0px;
+  }
+
+  .hero-btns {
+    transform: scale(0.9);
+  }
+
   .project-details {
     padding: 0px;
   }
@@ -307,5 +348,21 @@
 @media screen and (max-width: 360px) {
   .modal {
     height: 150vw;
+  }
+
+  .hero-btns {
+    transform: scale(0.7);
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .hero-job-title-text {
+    font-size: 18px;
+  }
+
+  .intro-text p {
+    font-size: 12px;
   }
 }

@@ -34,7 +34,7 @@ btnNavEl.addEventListener("click", () => {
 
 const sectionHeroEl = document.querySelector(".hero-section");
 const contactSection = document.querySelector(".contact-section");
-
+const footerSection = document.querySelector(".footer grid");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
@@ -55,6 +55,28 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+
+let ctaBtn = document.querySelector("#cta-btn-hero");
+
+const obs2 = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    if (ent.isIntersecting) {
+      ctaBtn.classList.add("hide");
+      console.log(entries);
+    }
+    if (!ent.isIntersecting) {
+      ctaBtn.classList.remove("hide");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-350px",
+  }
+);
+
+obs2.observe(contactSection);
 
 // Basic scroll
 

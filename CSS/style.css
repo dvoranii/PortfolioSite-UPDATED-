@@ -9,6 +9,10 @@ header {
   z-index: 5;
 }
 
+header.hide {
+  display: none;
+}
+
 .logo {
   width: 70px;
 }
@@ -42,7 +46,7 @@ header {
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 8rem;
+  height: 6rem;
   padding-top: 0;
   padding-bottom: 0;
   animation: fadeInSlideDown 250ms ease;
@@ -98,6 +102,10 @@ header {
 #cta-btn-hero:hover {
   cursor: pointer;
   box-shadow: 0px 0px 10px #33f1ff54;
+}
+
+#cta-btn-hero.hide {
+  display: none;
 }
 
 #nav-portfolio,
