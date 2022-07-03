@@ -1207,10 +1207,14 @@ h1 {
   color: #fff;
 }
 
-.input-wrapper {
+.input-wrapper,
+.input-wrapper2 {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.input-wrapper2 {
+  grid-column: span 2;
 }
 
 #input-1,

@@ -317,15 +317,92 @@
   .gallery-img-wrapper {
     align-self: center;
   }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  .cta-paragraph {
+    padding-bottom: 24px;
+    max-width: 90%;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .contact-form.grid.grid--2--cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.35fr 0.35fr 1fr 1fr;
+    column-gap: 0px;
+  }
+
+  #input-2 {
+    grid-row: 2;
+  }
+
+  .cta-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    justify-content: flex-start;
+  }
+
+  .cta-btn-2 {
+    margin: 0 auto;
+  }
+
+  .cta-email {
+    margin-bottom: 8px;
+  }
+
+  .outlook {
+    padding-top: 24px;
+  }
 }
 
 @media screen and (max-width: 470px) {
+  .parallax {
+    display: none;
+  }
+
+  .hero-section {
+    background: rgba(37, 141, 239, 1);
+  }
+
+  header {
+    background: rgba(37, 141, 239, 1);
+  }
+
+  .waves-container {
+    background: linear-gradient(
+      180deg,
+      rgba(37, 141, 239, 1) 0%,
+      rgba(37, 141, 239, 1) 45%,
+      rgba(255, 255, 255, 1) 93%
+    );
+
+    margin-top: -300px;
+    height: 45vh;
+  }
+
+  #services {
+    margin-top: -96px;
+  }
+  /* .hero-inner {
+    height: 70vh;
+  } */
+
   .modal {
     height: 135vw;
   }
 
   .hero.container {
     padding: 0px;
+  }
+
+  .container-2 {
+    padding: 0px 16px;
   }
 
   .hero-btns {
@@ -343,6 +420,69 @@
   .modal-img-wrapper {
     height: fit-content;
   }
+
+  .logo {
+    width: 40px;
+  }
+
+  .sticky header {
+    height: 4.5rem;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  .services-title-container {
+    margin-top: 0px;
+  }
+
+  .services-title {
+    margin-bottom: 0.5rem;
+    font-size: 48px;
+  }
+
+  .section--services {
+    margin-top: 24px;
+  }
+
+  .services-title-container-inner::before {
+    bottom: 6px;
+    height: 32px;
+    width: 96px;
+  }
+
+  .services-title-container-inner2::before {
+    height: 32px;
+    bottom: 10px;
+    width: 80px;
+  }
+
+  .services-title-container-inner3::before {
+    width: 109px;
+    height: 32px;
+    bottom: 4px;
+  }
+
+  .line {
+    width: 190px;
+    margin-bottom: 56px;
+  }
+
+  .skill {
+    width: 100%;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .services-title-container {
+    margin-top: 96px;
+  }
+  /* header {
+    padding: 0rem 1.2rem 3rem 3rem;
+  } */
 }
 
 @media screen and (max-width: 360px) {

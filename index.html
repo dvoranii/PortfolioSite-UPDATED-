@@ -126,7 +126,7 @@
       </div>
 
       <!--Waves Container-->
-      <div>
+      <div class="waves-container">
         <svg
           class="waves"
           xmlns="http://www.w3.org/2000/svg"
@@ -350,7 +350,7 @@
     
     <section class="contact-section" id="contact">
         <h2 class="cta-title">Let's Connect</h2>
-        <p class="cta-paragraph">Want to inquire about a project or employment&nbsp;opportunity?<br> Fill out the form below and I will
+        <p class="cta-paragraph">Want to inquire about a project or employment opportunity?<br class="desktop-break"> Fill out the form below and I will
             return your message shortly.</p>
 
         <form id="contactForm" name="contactForm" class="contact-form grid grid--2--cols"
@@ -362,13 +362,14 @@
             </div>
             <div class="input-wrapper" id="input-2">
                 <label for="_email">Email</label>
-                <input name="_email" id="email" type="text" class="email" placeholder="Your email address">
+                <input name="_email" id="email" type="text" class="email" placeholder="Your email">
                 <p id="error-email" class="errorEmail">*Please enter an email address</p>
             </div>
+           <div class="input-wrapper2">
             <label for="message">Message</label>
             <textarea name="message" id="message" cols="30" rows="10" class="message"
-                placeholder="Enter your message here"></textarea>
-
+            placeholder="Enter your message here"></textarea>
+           </div>
             <div class="cta-bottom">
                 <button type="submit" class="cta-btn-2" id="cta-btn-2">Send</button>
                 <div class="outlook">
