@@ -3,6 +3,10 @@
     font-size: 18px;
   }
 
+  .contact-form {
+    width: 70%;
+  }
+
   .modal {
     height: 33vw;
   }
@@ -100,6 +104,18 @@
 @media screen and (max-width: 870px) {
   .modal-btns {
     margin-top: 12px;
+  }
+  .footer {
+    height: 25vh;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .ildidev-logo-2 {
+    width: 15%;
+  }
+
+  .footer-logo-container {
+    padding-bottom: 24px;
   }
 
   .tech-item img {
@@ -359,6 +375,13 @@
   .outlook {
     padding-top: 24px;
   }
+
+  .ildidev-logo-2 {
+    width: 25%;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -381,17 +404,11 @@
       rgba(37, 141, 239, 1) 45%,
       rgba(255, 255, 255, 1) 93%
     );
-
-    margin-top: -300px;
-    height: 45vh;
   }
 
   #services {
-    margin-top: -96px;
+    margin-top: -72px;
   }
-  /* .hero-inner {
-    height: 70vh;
-  } */
 
   .modal {
     height: 135vw;
@@ -423,6 +440,19 @@
 
   .logo {
     width: 40px;
+  }
+  .ildidev-logo-2 {
+    padding-top: 24px;
+    width: 70%;
+  }
+
+  .legal {
+    align-items: center;
+  }
+
+  .social-title,
+  .footer-nav-title {
+    font-size: 14px;
   }
 
   .sticky header {
@@ -469,6 +499,11 @@
     margin-bottom: 56px;
   }
 
+  #line2,
+  #line3 {
+    width: 145px;
+  }
+
   .skill {
     width: 100%;
   }
@@ -479,6 +514,14 @@
 
   .services-title-container {
     margin-top: 96px;
+  }
+
+  .social-text-wrapper p,
+  .footer-list li {
+    font-size: 12px;
+  }
+  .footer-socials {
+    margin-top: 14px;
   }
   /* header {
     padding: 0rem 1.2rem 3rem 3rem;

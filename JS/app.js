@@ -30,6 +30,15 @@ btnNavEl.addEventListener("click", () => {
   navList.classList.toggle("nav-active");
 });
 
+const navLinks = document.querySelectorAll(".mobile-nav-link");
+// const headerEl = document.querySelector("header");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navList.classList.remove("nav-active");
+  });
+});
+
 // Sticky Nav
 
 const sectionHeroEl = document.querySelector(".hero-section");
