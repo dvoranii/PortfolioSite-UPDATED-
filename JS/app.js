@@ -72,7 +72,6 @@ const obs2 = new IntersectionObserver(
     const ent = entries[0];
     if (ent.isIntersecting) {
       ctaBtn.classList.add("hide");
-      console.log(entries);
     }
     if (!ent.isIntersecting) {
       ctaBtn.classList.remove("hide");

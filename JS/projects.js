@@ -70,8 +70,21 @@ const getModal = (container, index) => {
         if (i + 1 == index) {
           container.insertAdjacentHTML("afterbegin", htmlTemplate);
         }
+      });
 
-        swapGalleryImg();
+      // try to make this a function
+      let galleryItem = document.querySelectorAll("#gallery-item");
+      let currentImg = document.querySelector(".current-img");
+      let placeholder;
+
+      galleryItem.forEach((item) => {
+        console.log(item);
+        item.addEventListener("click", (e) => {
+          console.log(e.currentTarget);
+          placeholder = e.currentTarget.src;
+          e.currentTarget.src = currentImg.src;
+          currentImg.src = placeholder;
+        });
       });
     });
 };
@@ -142,18 +155,19 @@ closeBtn.addEventListener("click", () => {
 // Look into making videos for projects
 
 // Turn this into a function and call it when clicking on an item
-let galleryItem = document.querySelectorAll("#gallery-item");
-let currentImg = document.querySelector(".current-img");
-let placeholder;
+// let galleryItem = document.querySelectorAll("#gallery-item");
+// let currentImg = document.querySelector(".current-img");
+// let placeholder;
 
-function swapGalleryImg() {
-  galleryItem.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
+// function swapGalleryImg(galleryItem) {
+//   galleryItem.forEach((item) => {
+//     item.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       console.log(item);
 
-      placeholder = e.currentTarget.src;
-      e.currentTarget.src = currentImg.src;
-      currentImg.src = placeholder;
-    });
-  });
-}
+//       placeholder = e.currentTarget.src;
+//       e.currentTarget.src = currentImg.src;
+//       currentImg.src = placeholder;
+//     });
+//   });
+// }

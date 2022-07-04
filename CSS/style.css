@@ -1309,7 +1309,7 @@ label {
 }
 
 .footer-logo-container {
-  padding-bottom: 12px;
+  padding: 0px 0px 24px 24px;
 }
 .footer-logo-container p {
   padding-top: 12px;
