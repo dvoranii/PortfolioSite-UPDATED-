@@ -26,8 +26,21 @@ setTimeout(() => {
   typeEffect(jobTitle, speed);
 }, 300);
 
+const burgerBtn = document.querySelector(".burger-btn");
+const xBtn = document.querySelector(".x-btn");
+let count = 0;
+
 btnNavEl.addEventListener("click", () => {
   navList.classList.toggle("nav-active");
+  count++;
+  if (count % 2 > 0) {
+    burgerBtn.classList.add("hide");
+    xBtn.classList.add("active");
+  }
+  if (count % 2 == 0) {
+    xBtn.classList.remove("active");
+    burgerBtn.classList.remove("hide");
+  }
 });
 
 const navLinks = document.querySelectorAll(".mobile-nav-link");
