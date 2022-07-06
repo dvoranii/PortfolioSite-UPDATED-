@@ -77,15 +77,7 @@ const getModal = (container, index) => {
       let currentImg = document.querySelector(".current-img");
       let placeholder;
 
-      galleryItem.forEach((item) => {
-        console.log(item);
-        item.addEventListener("click", (e) => {
-          console.log(e.currentTarget);
-          placeholder = e.currentTarget.src;
-          e.currentTarget.src = currentImg.src;
-          currentImg.src = placeholder;
-        });
-      });
+      swapGalleryImg(galleryItem, currentImg, placeholder);
     });
 };
 
@@ -154,20 +146,13 @@ closeBtn.addEventListener("click", () => {
 // might use flickity here
 // Look into making videos for projects
 
-// Turn this into a function and call it when clicking on an item
-// let galleryItem = document.querySelectorAll("#gallery-item");
-// let currentImg = document.querySelector(".current-img");
-// let placeholder;
-
-// function swapGalleryImg(galleryItem) {
-//   galleryItem.forEach((item) => {
-//     item.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       console.log(item);
-
-//       placeholder = e.currentTarget.src;
-//       e.currentTarget.src = currentImg.src;
-//       currentImg.src = placeholder;
-//     });
-//   });
-// }
+function swapGalleryImg(galleryItem, currentImg, placeholder) {
+  galleryItem.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      placeholder = e.currentTarget.src;
+      e.currentTarget.src = currentImg.src;
+      currentImg.src = placeholder;
+    });
+  });
+}
