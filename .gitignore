@@ -1,4 +1,3 @@
 #ignore api keys
-*.json
-
-contact-form.js
+firebase-key.json
+hidden.js
