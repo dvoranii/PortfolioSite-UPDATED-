@@ -4,6 +4,7 @@ let htmlTemplate;
 let templateArray = [];
 let modalContainer = document.querySelector(".modal");
 let galleryTemplate;
+let spinner = document.querySelector(".loading");
 
 const getModal = (container, index) => {
   fetch("/models/projects.json")
@@ -113,13 +114,17 @@ function getIndex(e) {
 
 // get index of target element then get modal with said index
 function showModal() {
+  spinner.classList.add("active");
   modalBg.classList.add("active");
   modalBg.style.visibility = "visible";
   modalBg.style.opacity = 1;
 
-  modal.classList.add("active");
-  modal.style.visibility = "visible";
-  modal.style.opacity = 1;
+  setTimeout(function () {
+    spinner.classList.remove("active");
+    modal.classList.add("active");
+    modal.style.visibility = "visible";
+    modal.style.opacity = 1;
+  }, 1500);
 }
 
 // clear modal container after closing modal
