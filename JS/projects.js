@@ -19,8 +19,6 @@ const getModal = (container, index) => {
         <div class="modal-img-wrapper">
         <h2 class="project-title mobile">${project[1].title}</h2>
             <img src="${project[1].images.currentImg}" alt="" class="modal-img current-img">
-
-            <!-- use a loop to do this -->
                 <div class="gallery-img-wrapper">
                     <img src="${project[1].images.imgGallery.item1}" id="gallery-item" alt="">
                     <img src="${project[1].images.imgGallery.item2}" id="gallery-item" alt="">
@@ -67,7 +65,6 @@ const getModal = (container, index) => {
                  </div>
                  </div>`;
 
-        //
         if (i + 1 == index) {
           container.insertAdjacentHTML("afterbegin", htmlTemplate);
         }
@@ -124,7 +121,7 @@ function showModal() {
     modal.classList.add("active");
     modal.style.visibility = "visible";
     modal.style.opacity = 1;
-  }, 1500);
+  }, 1000);
 }
 
 // clear modal container after closing modal

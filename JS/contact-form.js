@@ -1,16 +1,18 @@
 // Google Firebase Connection
-let key;
 
 function getAPIKey(url) {
   fetch(url)
     .then((res) => {
-      key = key;
       return res.json();
     })
     .then((data) => {
       return data.key;
+    })
+    .catch((err) => {
+      console.error(`Error -> ${err}`);
     });
 }
+
 var config = {
   apiKey: `${getAPIKey("/models/firebase-key.json")}`,
   authDomain: "my-portfolio-contact-bbb79.firebaseapp.com",
@@ -27,7 +29,6 @@ const messagesRef = firebase.database().ref("messages");
 
 const form = document.getElementById("contactForm");
 let errorName = document.querySelector(".errorName");
-let errorEmail = document.querySelector(".errorEmail");
 const messageSuccess = document.querySelector(".success");
 const emailErrorMsg1 = "*Please enter an email address";
 const emailErrorMsg2 = "*Please enter a valid email address (123@example.com)";

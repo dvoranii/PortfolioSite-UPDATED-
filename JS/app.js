@@ -117,3 +117,16 @@ scrollAnimWrapper({
     },
   },
 });
+
+// date
+const dateContainer = document.querySelector(".date");
+const now = new Date();
+const day = now.getDate();
+const month = now.getMonth() + 1;
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMinutes();
+
+dateContainer.textContent = `${year}`;
+
+// year month day

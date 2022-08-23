@@ -705,7 +705,6 @@ h1 {
 
 .skill {
   width: 70%;
-  /* height: clamp(200px, 33vw, 280px); */
   padding: 32px 48px 24px 32px;
   box-shadow: -9px 18px 18px rgba(0, 179, 255, var(--scroll));
   margin: 0 auto;
@@ -716,10 +715,10 @@ h1 {
   justify-content: center;
   transition: all 300ms ease-in-out;
   background-color: rgba(255, 255, 255, 0.815);
-
   opacity: var("--opacity");
-
   will-change: opacity;
+  transition: all 350ms ease;
+  color: #222222;
 }
 
 .skill-description {
@@ -743,8 +742,92 @@ h1 {
   box-shadow: -5px 20px 30px #00b3ff13;
 }
 
+.skill p:first-child {
+  transition: all 250ms ease;
+  letter-spacing: 0.5px;
+  font-family: "Roboto";
+}
+
+.skill:hover p:nth-child(3) {
+  color: #000000;
+}
+
+#js-skill:hover p:first-child {
+  color: #f2c94c;
+}
+#js-skill:hover {
+  box-shadow: -5px 20px 30px #f4c84d1f;
+}
+
+#css-skill:hover p:first-child {
+  color: #204ce6;
+}
+#css-skill:hover {
+  box-shadow: -5px 20px 30px #204be618;
+}
+
+#html-skill:hover {
+  box-shadow: -5px 20px 30px #e44e2527;
+}
+
+#html-skill:hover p:first-child {
+  color: #e44e25;
+}
+
+#angular-skill:hover {
+  box-shadow: -5px 20px 30px #ca00001c;
+}
+
+#angular-skill:hover p:first-child {
+  color: #df2e31;
+}
+
+#aws-skill:hover p:first-child {
+  color: #ff9009;
+}
+#aws-skill:hover {
+  box-shadow: -5px 20px 30px #ff90091a;
+}
+
+#ps-skill:hover {
+  box-shadow: -5px 20px 30px #05a9fb2c;
+}
+
+#ps-skill:hover p:first-child {
+  color: #05a9fb;
+}
+
+#node-skill:hover {
+  box-shadow: -5px 20px 30px #63ad6d3b;
+}
+#node-skill:hover p:first-child {
+  color: #3c873a;
+}
+
+#php-skill:hover {
+  box-shadow: -5px 20px 30px #787cb433;
+}
+
+#php-skill:hover p:first-child {
+  color: #787cb4;
+}
+
+#wp-skill:hover {
+  box-shadow: -5px 20px 30px #21749b2f;
+}
+
+#wp-skill:hover p:first-child {
+  color: #21759b;
+}
+
 .skill img {
   margin-bottom: 16px;
+  filter: grayscale(0.15) brightness(1) saturate(1);
+  transition: all 250ms ease-in-out;
+}
+
+.skill:hover img {
+  filter: grayscale(0) brightness(1.1) saturate(1.15);
 }
 .aws-logo {
   width: 70%;
@@ -949,7 +1032,7 @@ h1 {
   background-color: white;
   grid-template-columns: 1fr 1fr;
   padding: 24px;
-  height: 30vw;
+  height: fit-content;
   opacity: 0;
   visibility: hidden;
   z-index: 99999999;
@@ -987,6 +1070,7 @@ h1 {
   width: 100%;
   height: auto;
   max-width: 686px;
+  max-height: 390px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
@@ -1072,6 +1156,7 @@ h1 {
 .tech-item {
   display: flex;
   min-width: 16.5%;
+  justify-content: flex-start;
 }
 
 .tech-item img {
@@ -1083,12 +1168,10 @@ h1 {
 .tech-icons-list {
   display: flex;
   list-style: none;
-  max-width: 60%;
+  /* padding-top: 24px; */
+  max-width: 75%;
 }
 
-#tech-icon {
-  max-width: 15%;
-}
 .tech-icons {
   padding-top: 32px;
 }
@@ -1097,7 +1180,8 @@ h1 {
   display: flex;
   gap: 24px;
   margin-top: 24px;
-  /* justify-content: center; */
+  padding: 20px 0px;
+  justify-content: flex-start;
 }
 
 .modal-btns button {
@@ -1108,13 +1192,13 @@ h1 {
 .icon-wrapper {
   display: flex;
   text-align: center;
-  width: 200%;
+  width: 100%;
   padding: 12px;
 }
 
 .icon-wrapper img {
   max-width: 20%;
-  padding-inline-start: 12px;
+  /* padding-inline-start: 12px; */
 }
 
 .icon-wrapper span {
@@ -1319,14 +1403,6 @@ label {
 .cta-link:hover {
   text-shadow: 0px 0px 3px #38f2ff9d;
 }
-
-/* **************** */
-/* form validation */
-/* ************** */
-
-/* .display {
-  display: block !important;
-} */
 
 .errorName,
 .errorEmail {
